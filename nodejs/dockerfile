@@ -1,0 +1,12 @@
+# Official, current, Alpine Linux Node.js image
+# See https://hub.docker.com/_/node#image-variants
+FROM node:lts-alpine
+
+# Set working directory of the Alpine Linux Container
+WORKDIR /app
+
+# Copy only my index.js file to it
+COPY index.js .
+
+# Run it
+CMD ["node", "index.js"]
