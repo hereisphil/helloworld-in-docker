@@ -1,0 +1,12 @@
+# Official, current, Alpine Linux python3 image
+# See https://hub.docker.com/_/python#pythonversion
+FROM python:3-alpine
+
+# Set working directory
+WORKDIR /app
+
+#Copy only my index.py file
+COPY index.py .
+
+# Run it
+CMD ["python", "index.py"]
