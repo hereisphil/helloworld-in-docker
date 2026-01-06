@@ -1,0 +1,15 @@
+# I decided to go this this Java image:
+# https://hub.docker.com/_/amazoncorretto/
+FROM amazoncorretto:latest
+
+# Set working directory
+WORKDIR /app
+
+# Copy only .java file to compile on the container
+COPY Main.java .
+
+# Compile it
+RUN javac Main.java
+
+# Run it
+CMD ["java", "Main"]
