@@ -1,0 +1,11 @@
+# Official, Alpine Linux, Rust Image
+FROM rust:alpine
+
+# Set working directory
+WORKDIR /app
+
+# Copy the whole app folder
+COPY /app .
+
+# Compile & Run it
+CMD ["cargo", "run"]
